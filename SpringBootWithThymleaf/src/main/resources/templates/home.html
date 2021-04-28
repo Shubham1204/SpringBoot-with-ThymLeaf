@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1>Hi, from Home Page</h1>
+	<ul>
+		<h2>Cars</h2>
+		<li th:each="n:${cars}"><span th:text="${n}"></span></li>
+	</ul>
+	<h4>Is user Active : <span th:style="${isActive}?'color:green;':'color:red;'" th:text="${isActive}?'Yes':'No'"></span></h4>
+	<h4>Which color you want Matt or glossy ?  : <span th:if="${color}=='matt'">Matt</span>
+	<span th:unless="${color}=='matt'">Glossy</span></h4>
+	
+	<h1 th:text="${speakers}"></h1>
+	<footer th:replace="footer::footer1(${title},${time})"></footer>
+</body>
+</html>

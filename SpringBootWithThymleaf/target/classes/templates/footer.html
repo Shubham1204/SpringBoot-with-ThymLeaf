@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<footer th:fragment="footer1(title,time)">
+	<h2 th:text="${title}"></h2>
+	<h2 th:text="${time}"></h2>
+	<p>This is footer tag</p>
+	</footer>
+</body>
+</html>
